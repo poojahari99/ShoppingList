@@ -1,0 +1,1 @@
+export { InventoryRepository, } from './shopping-list-repository';

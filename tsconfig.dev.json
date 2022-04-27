@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@controllers": ["src/controllers/index"],
+      "@enums": ["src/enums/index"],
+      "@errors": ["src/errors/index"],
+      "@helpers": ["src/helpers/index"],
+      "@interfaces": ["src/interfaces/index"],
+      "@middleware": ["src/middleware/index"],
+      "@models": ["src/models/index"],
+      "@repositories": ["src/repositories/index"],
+      "@server": ["src/server/index"],
+      "@services": ["src/services/index"],
+      "@typings": ["src/typings/index"],
+      "@validators": ["src/validators/index"],
+    }
+  },
+  "include": ["./src/**/*.ts", ".eslintrc.js"],
+  "exclude": ["./node_modules/*"]
+}

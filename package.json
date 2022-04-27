@@ -1,0 +1,49 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "gulp build",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "gcp-build": "gulp build",
+    "emulators": "firebase emulators:start",
+    "serve": "gulp serve",
+    "deploy-stage": "gcloud app deploy app_stage.yaml",
+    "deploy-prod": "gcloud app deploy app_prod.yaml"
+  },
+  "author": "Pooja",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "gulp": "^3.9.1",
+    "http": "^0.0.1-security",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15"
+  },
+  "_moduleAliases": {
+    "@controllers": "lib/src/controllers",
+    "@enums": "lib/src/enums",
+    "@errors": "lib/src/errors",
+    "@helpers": "lib/src/helpers",
+    "@interfaces": "lib/src/interfaces",
+    "@middleware": "lib/src/middleware",
+    "@models": "lib/src/models",
+    "@repositories": "lib/src/repositories",
+    "@server": "lib/src/server",
+    "@services": "lib/src/services",
+    "@typings": "lib/src/typings",
+    "@validators": "lib/src/validators"
+  },
+  "devDependencies": {
+    "gulp-jscs": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "jshint": "^2.13.4"
+  }
+}
